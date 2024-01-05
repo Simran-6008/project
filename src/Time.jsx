@@ -1,12 +1,15 @@
 const Time = ({ year, event }) => {
-  let myStyle = {
-    color: "green",
-    backgroundColor: "pink",
-    display: "inline-block",
-  };
   return (
     <>
-      <h2 style={myStyle}>{year}</h2>
+      <h2
+        style={{
+          color: "red",
+          backgroundColor: "yellow",
+          display: "inline-block",
+        }}
+      >
+        {year}
+      </h2>
       <p> {event}</p>
     </>
   );
