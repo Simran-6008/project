@@ -1,8 +1,12 @@
-import "./Time.css";
 const Time = ({ year, event }) => {
+  let myStyle = {
+    color: "green",
+    backgroundColor: "pink",
+    display: "inline-block",
+  };
   return (
     <>
-      <h2 className="heading">{year}</h2>
+      <h2 style={myStyle}>{year}</h2>
       <p> {event}</p>
     </>
   );
