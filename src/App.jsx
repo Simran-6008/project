@@ -1,13 +1,9 @@
 import Time from "./Time";
-import events from "./event.json";
 const App = () => {
   return (
     <div>
-      <h1>Welcome to Simran's Timeline</h1>
-      <br />
-      {events.map((event) => {
-        return <Time key={event.year} year={event.year} event={event.event} />;
-      })}
+      <Time year={2002} event="I was born in Kullu Himachal Pradesh"/>
+      <Time year={2006} event="I went to school first time "/>
     </div>
   );
 };
