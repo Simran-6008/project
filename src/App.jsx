@@ -2,8 +2,13 @@ import Time from "./Time";
 import events from "./event.json";
 import { useState } from "react";
 const App = () => {
-  function myEvents(val) {
-    console.log(val.target.value);
+  const[year, setYear] = useState("")
+  const[event, setEvent] = useState("")
+  function setYearEvent(yea) {
+    setYear(yea.target.value)
+  }
+  function setIncident(eve){
+    setEvent(eve.target.value)
   }
   return (
     <div>
@@ -15,9 +20,9 @@ const App = () => {
             <Time key={event.year} year={event.year} event={event.event} />
           );
         })}
-        <input type="number" min="1970" onChange={myEvents} />
-        <input type="text" onChange={myEvents} />
-        <input type="submit" />
+        <input type="number" min="1970" onChange={setYearEvent} />
+        <input type="text" onChange={setIncident} />
+        <input type="submit"/>
       </div>
     </div>
   );
