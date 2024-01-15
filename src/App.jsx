@@ -11,6 +11,9 @@ const App = () => {
             <Time key={event.year} year={event.year} event={event.event} />
           );
         })}
+        <input type="number" min="1970" />
+        <input type="text" />
+        <input type="submit" />
       </div>
     </div>
   );
