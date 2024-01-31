@@ -12,7 +12,7 @@ const App = () => {
         //console.log(responsive)
         return responsive.json();
       })
-      .then((jsonData) => console.log(jsonData));
+      .then((jsonData) => {setData(jsonData)});
   },[])
 
   function handleYear(yea) {
@@ -38,7 +38,6 @@ const App = () => {
           return (
             <Time
               key={year}
-              id={event.id}
               year={event.year}
               incident={event.incident}
             />
