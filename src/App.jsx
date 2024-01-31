@@ -1,37 +1,54 @@
 import Time from "./Time";
-import events from "./event.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 const App = () => {
-  const [data, dataHandle] = useState([])
-  const[year, setYear] = useState("")
-  const[event, setEvent] = useState("")
-  function setYearEvent(yea) {
-    setYear(yea.target.value)
+  const [data, setData] = useState([]);
+  const [year, setYear] = useState("");
+  const [event, setEvent] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3002/events")
+      .then((responsive) => {
+        //console.log(responsive)
+        return responsive.json();
+      })
+      .then((jsonData) => console.log(jsonData));
+  },[])
+
+  function handleYear(yea) {
+    setYear(yea.target.value);
   }
-  function setIncident(eve){
-    setEvent(eve.target.value)
+  function handleIncident(eve) {
+    setEvent(eve.target.value);
   }
-  function submitEvent (){
-    let newObj = {}
-    newObj.year = year
-    newObj.event = event
-    console.log(newObj)
+  function submitEvent() {
+    let newObj = {};
+    newObj.year = year;
+    newObj.event = event;
+    setData([...data, newObj]);
+    setYear("");
+    setEvent("");
   }
   return (
-    <div>
+    <>
       <div>
         <h1>Welcome to Simran's Timeline</h1>
         <br />
-        {events.map((event) => {
+        {data.map((event) => {
           return (
-            <Time key={event.year} year={event.year} event={event.event} />
+            <Time
+              key={year}
+              id={event.id}
+              year={event.year}
+              incident={event.incident}
+            />
           );
         })}
-        <input type="number" min="1970" onChange={setYearEvent} />
-        <input type="text" onChange={setIncident} />
-        <input type="submit" onClick={submitEvent}/>
+        <input type="number" min="1970" onChange={handleYear} value={year} />
+        <input type="text" onChange={handleIncident} value={event} />
+        <input type="submit" onClick={submitEvent} />
       </div>
-    </div>
+    </>
   );
 };
 
