@@ -12,8 +12,10 @@ const App = () => {
         //console.log(responsive)
         return responsive.json();
       })
-      .then((jsonData) => {setData(jsonData)});
-  },[])
+      .then((jsonData) => {
+        setData(jsonData);
+      });
+  }, []);
 
   function handleYear(yea) {
     setYear(yea.target.value);
@@ -22,6 +24,11 @@ const App = () => {
     setEvent(eve.target.value);
   }
   function submitEvent() {
+    fetch("http://localhost:3002/events", {
+      method: "POST",
+      body: JSON.stringify({ year, event }),
+    });
+
     let newObj = {};
     newObj.year = year;
     newObj.event = event;
@@ -34,14 +41,8 @@ const App = () => {
       <div>
         <h1>Welcome to Simran's Timeline</h1>
         <br />
-        {data.map((event) => {
-          return (
-            <Time
-              key={year}
-              year={event.year}
-              incident={event.incident}
-            />
-          );
+        {data.map((events) => {
+          return <Time key={year} year={events.year} event={events.event} />;
         })}
         <input type="number" min="1970" onChange={handleYear} value={year} />
         <input type="text" onChange={handleIncident} value={event} />

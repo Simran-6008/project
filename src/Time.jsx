@@ -1,4 +1,4 @@
-const Time = ({ year, incident }) => {
+const Time = ({ year, event }) => {
   return (
     <>
       <h2
@@ -10,7 +10,7 @@ const Time = ({ year, incident }) => {
       >
         {year}
       </h2>
-      <p> {incident}</p>
+      <p> {event}</p>
     </>
   );
 };
