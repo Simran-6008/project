@@ -1,0 +1,9 @@
+div > h2 {
+    color: red;
+    display: inline-block;
+    font-size: 2em;
+}
+
+div > p{
+    font-size: 2em;
+}

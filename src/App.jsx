@@ -1,5 +1,6 @@
-import Time from "./Time";
+import Time from "./COMPONENTS/Time";
 import { useEffect, useState } from "react";
+import "./CSS/App.css";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -36,19 +37,18 @@ const App = () => {
     setYear("");
     setEvent("");
   }
+
   return (
-    <>
-      <div>
-        <h1>Welcome to Simran's Timeline</h1>
-        <br />
-        {data.map((events) => {
-          return <Time key={year} year={events.year} event={events.event} />;
-        })}
-        <input type="number" min="1970" onChange={handleYear} value={year} />
-        <input type="text" onChange={handleIncident} value={event} />
-        <input type="submit" onClick={submitEvent} />
-      </div>
-    </>
+    <div>
+      <h1>Welcome to Simran's Timeline</h1>
+      <br />
+      {data.map((events) => {
+        return <Time key={year} year={events.year} event={events.event} />;
+      })}
+      <input type="number" min="1970" onChange={handleYear} value={year} />
+      <input type="text" onChange={handleIncident} value={event} />
+      <input type="submit" onClick={submitEvent} />
+    </div>
   );
 };
 

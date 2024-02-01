@@ -1,0 +1,14 @@
+div > h1{
+    color: black;
+    background-color: antiquewhite;
+    display: inline-block;
+    font-size: 4em;
+}
+/* div{
+    text-align: center;
+} */
+
+div > input {
+    min-height: 30px;
+    margin: 5px;
+}

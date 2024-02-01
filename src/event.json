@@ -3,27 +3,42 @@
     {
       "id": 1,
       "year": 2002,
-      "event": "I was born in Dhalpur Kullu hospital"
+      "event": "I was born in Dhalpur Kullu hospital (Himachal Pradesh)."
     },
     {
       "id": 2,
       "year": 2005,
-      "event": "I went school for the first time"
+      "event": "I went to school for the first time."
     },
     {
       "id": 3,
       "year": 2010,
-      "event": "A sheep hit me with it's horn and I was admitted to hospital"
+      "event": "A sheep hit me with it's horn and I was admitted to hospital."
     },
     {
-      "id": "7fd0",
-      "year": "3001",
-      "event": "I i liked icecreame"
+      "id": "2bbc",
+      "year": "2015",
+      "event": "I joined sports major and minor games."
     },
     {
-      "id": "15d8",
-      "year": "3004",
-      "event": "I will buy bike"
+      "id": "38b4",
+      "year": "2018",
+      "event": "I passes my 10th class."
+    },
+    {
+      "id": "a529",
+      "year": "2019",
+      "event": "I got 1st position in race and won gold medal for Himachal Pradesh."
+    },
+    {
+      "id": "c21c",
+      "year": "2020",
+      "event": "I passed my 12th."
+    },
+    {
+      "id": "0510",
+      "year": "2023",
+      "event": "I have joined Sajhe Sapne organisation."
     }
   ]
 }
