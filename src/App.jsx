@@ -1,7 +1,6 @@
 import Time from "./COMPONENTS/Time";
 import { useEffect, useState } from "react";
 import "./CSS/App.css";
-
 const App = () => {
   const [data, setData] = useState([]);
   const [year, setYear] = useState("");
@@ -40,10 +39,10 @@ const App = () => {
 
   return (
     <div>
-      <h1>Welcome to Simran's Timeline</h1>
+      <h1>Add Your Memorable Timelines</h1>
       <br />
       {data.map((events) => {
-        return <Time key={year} year={events.year} event={events.event} />;
+        return <Time key={events.year} year={events.year} event={events.event} />;
       })}
       <input type="number" min="1970" onChange={handleYear} value={year} />
       <input type="text" onChange={handleIncident} value={event} />

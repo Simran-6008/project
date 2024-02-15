@@ -1,17 +1,17 @@
 {
   "events": [
     {
-      "id": 1,
+      "id": "1",
       "year": 2002,
       "event": "I was born in Dhalpur Kullu hospital (Himachal Pradesh)."
     },
     {
-      "id": 2,
+      "id": "2",
       "year": 2005,
       "event": "I went to school for the first time."
     },
     {
-      "id": 3,
+      "id": "3",
       "year": 2010,
       "event": "A sheep hit me with it's horn and I was admitted to hospital."
     },
@@ -39,6 +39,11 @@
       "id": "0510",
       "year": "2023",
       "event": "I have joined Sajhe Sapne organisation."
+    },
+    {
+      "id": "9d92",
+      "year": "2024",
+      "event": "I have graduated from Sajhe Sapne"
     }
   ]
 }

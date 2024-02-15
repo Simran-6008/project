@@ -1,12 +1,12 @@
 div > h1{
-    color: black;
-    background-color: antiquewhite;
+    background-color: rgb(240, 195, 209);
+    box-shadow: 0px 6px 30px 5px palevioletred;
     display: inline-block;
     font-size: 4em;
 }
-/* div{
+div{
     text-align: center;
-} */
+}
 
 div > input {
     min-height: 30px;
