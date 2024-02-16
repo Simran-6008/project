@@ -46,7 +46,7 @@ const App = () => {
       })}
       <input type="number" min="1970" onChange={handleYear} value={year} />
       <input type="text" onChange={handleIncident} value={event} />
-      <input type="submit" onClick={submitEvent} />
+      <input className="submit" type="submit" onClick={submitEvent} />
     </div>
   );
 };
