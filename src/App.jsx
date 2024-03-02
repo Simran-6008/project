@@ -44,8 +44,8 @@ const App = () => {
       {data.map((events) => {
         return <Time key={events.year} year={events.year} event={events.event} />;
       })}
-      <input type="number" min="1970" onChange={handleYear} value={year} />
-      <input type="text" onChange={handleIncident} value={event} />
+      <input type="number" min="1970" onChange={handleYear} value={year}  placeholder="enter a year"/>
+      <input type="text" onChange={handleIncident} value={event} placeholder="enter a event"/>
       <input className="submit" type="submit" onClick={submitEvent} />
     </div>
   );
